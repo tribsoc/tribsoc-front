@@ -1,0 +1,13 @@
+.navbar{
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    cursor: pointer;
+    transition: .8s;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
