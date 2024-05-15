@@ -1,3 +1,8 @@
-<nav class="navbar">
-    <img routerLink="/" class="logo" src="../../../favicon.ico" alt="">
+<nav [ngClass]="rla.isActive ? 'hide' : 'navbar'">
+    <div class="routes">
+        <a routerLink="/conversor" class="route">Conversor</a>
+        <div class="divider"></div>
+        <a routerLink="/entrar" class="route" routerLinkActive="active-link" #rla="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">Entrar</a>
+        <a routerLink="/cadastro" class="bordered route" routerLinkActive="active-link" #rla="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">Cadastrar-se</a>
+    </div>
 </nav>

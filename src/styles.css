@@ -1,6 +1,64 @@
+:root{
+    --tribsoc-blue: #1C3762;
+    --tribsoc-lightblue: #3EABDA;
+}
+
+@font-face {
+    font-family:'Poppins';
+    src: url(./assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'PoppinsB';
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'PoppinsR';
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
 html,
 body{
     margin: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--tribsoc-blue);
+}
+
+a{
+    height: fit-content;
+    width: fit-content;
+}
+
+a,
+button{
+    all: unset;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 32px;
+    font-family: 'PoppinsB', sans-serif;
+}
+
+h1,
+p{
+    margin: 0;
+}
+
+footer{
+    
+}
+
+.divider{
+    height: 30px;
+    width: 0.05rem;
+    background-color: var(--tribsoc-blue);
+}
+
+.hor{
+
 }

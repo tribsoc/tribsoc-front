@@ -1,0 +1,9 @@
+.login-box{
+    padding: 10px;
+}
+
+.invalid{
+    font-size: 14px;
+    font-family: 'PoppinsR';
+    color: rgb(255, 60, 60);
+}

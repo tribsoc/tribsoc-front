@@ -1,0 +1,8 @@
+<div style="width: 100%; padding: 30px; display: flex; justify-content: center; align-items: center;">
+<div class="converter-box">
+    <label for="value">Valor</label>
+    <input type="text" name="value" required="" [(ngModel)]="value">
+    <p class="">{{ this.real }}</p>
+    <button class="button" (click)="calculateDolar()">Converter</button>
+</div>
+</div>
