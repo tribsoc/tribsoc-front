@@ -9,13 +9,13 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrl: './converter.component.css'
 })
 export class ConverterComponent {
-    value:number = 0
+    value = ''
     dolar:number = 5.16;
     real:number = 0
 
     calculateDolar(){
       this.real = 0;
-      this.real = this.value * this.dolar
+      this.real = +this.value * this.dolar
     }
 
 }

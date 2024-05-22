@@ -1,9 +1,10 @@
 :root{
     --tribsoc-blue: #1C3762;
     --tribsoc-lightblue: #3EABDA;
+    --tribsoc-lightblue-bg:#3EABDA80;
 }
 
-@font-face {
+@font-face {    
     font-family:'Poppins';
     src: url(./assets/fonts/Poppins-SemiBold.ttf);
 }

@@ -1,11 +1,10 @@
 <div class="login-box">
     <form [formGroup]="userForm">
         <div class="">
-            <label class="form-label">First name</label>
-        <input type="text" class="form-control" formControlName="firstName">
-        <div class="text-danger" *ngIf="userForm.controls['firstName'].invalid && (isFormSubmitted || userForm.controls['firstName'].touched || userForm.controls['firstName'].dirty)">
-           <span class="invalid" *ngIf="userForm.controls['firstName'].errors?.['required']">This Is Required</span>
+        <input type="text" class="form-control" placeholder="Email">
         </div>
+        <div class="">
+        <input type="text" class="form-control" placeholder="Senha">
         </div>
     </form>
 </div>
