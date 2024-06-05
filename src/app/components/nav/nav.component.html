@@ -1,6 +1,11 @@
 <nav [ngClass]="rla.isActive ? 'hide' : 'navbar'">
+    <a style="margin-left: 10px;" routerLink="/">
+        <img style="width: 50px;" src="../../../assets/images/logo.png" alt="">
+    </a>
     <div class="routes">
         <a routerLink="/conversor" class="route">Conversor</a>
+        <div class="divider"></div>
+        <a routerLink="/vagas" class="route">Vagas</a>
         <div class="divider"></div>
         <a routerLink="/entrar" class="route" routerLinkActive="active-link" #rla="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">Entrar</a>
         <a routerLink="/cadastro" class="bordered route" routerLinkActive="active-link" #rla="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">Cadastrar-se</a>

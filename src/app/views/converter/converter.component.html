@@ -1,8 +1,37 @@
 <div style="width: 100%; padding: 30px; display: flex; justify-content: center; align-items: center;">
-<div class="converter-box">
-    <label for="value">Valor</label>
-    <input type="text" name="value" required="" [(ngModel)]="value">
-    <p class="">{{ this.real }}</p>
-    <button class="button" (click)="calculateDolar()">Converter</button>
-</div>
+    <div class="converter-container">
+        <div class="converter-box">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="value" class="label">Valor:</label>
+                    <input type="text" name="value" required [(ngModel)]="value" (ngModelChange)="updateValue($event)" class="value-input">
+                    <span class="currency-code">{{ selectedCurrency === 'dolar' ? 'USD' : 'EUR' }}</span>
+                </div>
+            </div>
+            <div class="currency-buttons">
+                <button class="currency-button" [class.selected]="selectedCurrency === 'dolar'" (click)="setCurrency('dolar')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Dólar dos EUA" class="flag-big">
+                </button>
+                <button class="currency-button" [class.selected]="selectedCurrency === 'euro'" (click)="setCurrency('euro')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="Euro" class="flag-big">
+                </button>
+            </div>
+            
+            <div class="results">
+                <p class="result-label">Valor Convertido: <span class="result">{{ real | currency:'BRL' }}</span></p>
+                <p class="result-label">Valor Após Impostos: <span class="result">{{ realAfterTax | currency:'BRL' }}</span></p>
+                <p class="taxes-label">Valor dos Impostos: <span class="taxes">{{ taxes | currency:'BRL' }}</span></p>
+            </div>
+            
+            <button class="button" (click)="calculate()">Converter</button>
+        </div>
+
+        <div class="historico" *ngIf="historico.length > 0">
+            <div *ngFor="let item of historico.slice().reverse()" class="historico-item">
+                <img src="{{ selectedCurrency === 'dolar' ? 'https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg' : 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg' }}" alt="{{ selectedCurrency === 'dolar' ? 'Dólar dos EUA' : 'Euro' }}" class="flag">
+                <p>Valor: {{ item.valor }}</p>
+                <p>Valor Convertido: {{ item.valorConvertido }}</p>
+            </div>
+        </div>
+    </div>
 </div>

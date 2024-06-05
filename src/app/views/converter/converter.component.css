@@ -1,13 +1,105 @@
-.button{
-    padding: 10px 30px;
-    background-color: var(--tribsoc-lightblue);
-    font-size: 16px;
-    border-radius: 15px;
-    color: #FFFFFF;
-}
-
-.converter-box{
+.historico {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+}
+
+.historico-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.historico-item p {
+    margin: 0;
+}
+
+.currency-buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.currency-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.currency-button.selected, .currency-button:hover {
+    opacity: 1;
+}
+
+.flag {
+    width: 20px;
+    height: auto;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: #add8e6;
+    font-size: 16px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #87ceeb;
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 2px solid #add8e6;
+    border-radius: 15px;
+    background-color: #f0f8ff;
+    width: 400px;
+}
+
+.value-input {
+    border: none;
+    border-bottom: 2px solid #00008B;
+    font-size: 18px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    outline: none;
+    background: none;
+}
+
+.label {
+    color: #00008B;
+    font-size: 18px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.result {
+    color: #006400; /* Verde escuro */
+}
+
+.taxes {
+    color: #8B0000; /* Vermelho escuro */
+}
+
+.flag-big {
+    width: 50px;
+    height: auto;
 }
